@@ -1,0 +1,10 @@
+.over {
+    height: 600;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.over::-webkit-scrollbar {
+    display: none;
+  }

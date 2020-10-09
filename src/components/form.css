@@ -1,0 +1,3 @@
+.no-border::placeholder { 
+    color:white !important;
+  }
