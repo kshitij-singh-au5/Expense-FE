@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const tabData = () => {
-    let data = axios.get("http://localhost:5000/users")
+    let data = axios.get("https://expense-be.herokuapp.com/users")
     return (dispatch)=> {
         data.then( (res)=> {console.log(res.data)
             dispatch({
@@ -23,7 +23,7 @@ export const editData = (elem) => {
 }
 
 export const submitNewData = (id, title, amount, note, date) => {
-    let data = axios.put(`http://localhost:5000/users/${id}`, {title, amount, note, date})
+    let data = axios.put(`https://expense-be.herokuapp.com/users/${id}`, {title, amount, note, date})
     return (dispatch)=> {
         data.then( (res)=> {console.log(res.data,"elem")
             
@@ -37,7 +37,7 @@ export const submitNewData = (id, title, amount, note, date) => {
 }
 
 export const userData = (title, amount, note, date) => {
-    let data = axios.post("http://localhost:5000/users",{title, amount, note, date})
+    let data = axios.post("https://expense-be.herokuapp.com/users",{title, amount, note, date})
     return (dispatch)=> {
         data.then( (res)=> {console.log(res.data)
             dispatch({
@@ -51,7 +51,7 @@ export const userData = (title, amount, note, date) => {
 
 
 export const delData = (id) => {console.log(id)
-    const data = axios.delete(`http://localhost:5000/users/${id}`)
+    const data = axios.delete(`https://expense-be.herokuapp.com/users/${id}`)
     return (dispatch)=> {
         data.then( (res)=> {
             dispatch({
